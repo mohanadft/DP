@@ -114,5 +114,3 @@ const solution5 = (n: number): number => {
 
   return gen.next().value as number;
 };
-
-console.log(solution(3));
