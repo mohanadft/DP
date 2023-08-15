@@ -33,7 +33,7 @@ const solution = (n: number): number => {
 /**
  *
  * @param {number} n
- * @param {[key: string]: number} m
+ * @param {MemoObjectType} m
  * @returns {number}
  */
 
