@@ -8,6 +8,8 @@
  * Given n, calculate F(n).
  */
 
+import { MemoObjectType } from './types';
+
 /**
  *
  * @param {number} n
@@ -16,7 +18,7 @@
 
 // Solution 1
 const solution = (n: number): number => {
-  let m: { [key: string]: number } = {};
+  let m: MemoObjectType = {};
   const backtrack = (n: number) => {
     if (n <= 1) return n;
 
@@ -38,7 +40,7 @@ const solution = (n: number): number => {
 // Solution 2 (Having a default hash,
 // no need to declare it in scope of the function)
 
-const solution2 = (n: number, m: { [key: string]: number } = {}): number => {
+const solution2 = (n: number, m: MemoObjectType = {}): number => {
   if (n <= 1) return n;
 
   if (m[n]) return m[n];
