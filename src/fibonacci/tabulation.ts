@@ -4,9 +4,9 @@
  * @returns {number}
  */
 
-// Solution 5 (Generators).
+// Solution 1 (Generators).
 // This approach `Tabulation` starts from base cases to the result. (In opposite of memoization)
-const solution5 = (n: number): number => {
+const solution1 = (n: number): number => {
   function* fibGenerator() {
     let arr = [0, 1];
 
@@ -27,4 +27,20 @@ const solution5 = (n: number): number => {
   }
 
   return gen.next().value as number;
+};
+
+/**
+ *
+ * @param {number} n
+ * @returns {number}
+ */
+
+const solution2 = (n: number): number => {
+  let dp = [0, 1];
+
+  for (let i = 2; i <= n; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+
+  return dp.at(-1) as number;
 };
