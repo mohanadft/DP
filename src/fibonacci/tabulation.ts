@@ -68,13 +68,14 @@ const solution2 = (n: number): number => {
 const soultion3 = (n: number): number => {
   let prev1 = 0;
   let prev2 = 1;
-  let res = 0;
 
   for (let i = 2; i <= n; i++) {
-    res = prev1 + prev2;
+    let res = prev1 + prev2;
     prev1 = prev2;
     prev2 = res;
   }
 
-  return res;
+  return prev2;
 };
+
+soultion3(5);
