@@ -1,11 +1,17 @@
 /**
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
  *
  * @param {number} n
  * @returns {number}
  */
 
-// Solution 1 (Generators).
-// This approach `Tabulation` starts from base cases to the result. (In opposite of memoization)
+/**
+ * Solution 1 (Generators).
+ * This approach `Tabulation` starts from base cases to the result. (In opposite
+ * of memoization)
+ */
+
 const solution1 = (n: number): number => {
   function* fibGenerator() {
     let arr = [0, 1];
@@ -30,6 +36,8 @@ const solution1 = (n: number): number => {
 };
 
 /**
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
  *
  * @param {number} n
  * @returns {number}
