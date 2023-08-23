@@ -1,4 +1,4 @@
-import { MemoObjectType } from './types';
+import { MemoObjectType } from '../@types/types';
 
 /**
  *
