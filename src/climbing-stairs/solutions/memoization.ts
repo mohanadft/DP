@@ -61,3 +61,17 @@ const solution3 = (n: number, m: number[] = Array(n + 1).fill(-1)): number => {
  * @param {number} n
  * @returns {number}
  */
+
+// Solution 4 (Using array for memoization)
+const solution4 = (n: number): number => {
+  let m = Array(n + 1).fill(-1);
+  const backtrack = (n: number) => {
+    if (n <= 1) return 1;
+
+    if (m[n] !== -1) return m[n];
+
+    m[n] = backtrack(n - 1) + backtrack(n - 2);
+    return m[n];
+  };
+  return backtrack(n);
+};
