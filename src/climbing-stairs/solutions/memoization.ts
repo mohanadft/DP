@@ -38,3 +38,26 @@ const solution2 = (n: number, m: MemoObjectType = {}): number => {
   m[n] = solution2(n - 1, m) + solution2(n - 2, m);
   return m[n];
 };
+
+/**
+ *
+ * @param {number} n
+ * @param {number[]} m
+ * @returns {number}
+ */
+
+// Solution 3 (Having a default array, no need to declare it in scope of the function)
+const solution3 = (n: number, m: number[] = Array(n + 1).fill(-1)): number => {
+  if (n <= 1) return 1;
+
+  if (m[n] != -1) return m[n];
+
+  m[n] = solution3(n - 1, m) + solution3(n - 2, m);
+  return m[n];
+};
+
+/**
+ *
+ * @param {number} n
+ * @returns {number}
+ */
