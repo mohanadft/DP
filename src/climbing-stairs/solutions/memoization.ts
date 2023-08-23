@@ -1,6 +1,13 @@
 import { MemoObjectType } from '../../@types/types';
 
 /**
+
+  NOTE: The solutions presented here are similar to Fibonacci sequence solutions but with a minor change. In the Fibonacci problem, we aimed to reach base cases 0 and 1. In this case, the base cases are always 1 because each function call represents a step. When we reach 0 or 1, we count them as individual steps. This is the primary difference between the functions below and the ones used for the Fibonacci problem.
+
+  In the Fibonacci problem, if we encountered the base cases, we returned them as actual values, 0 and 1. Here, we always return 1 as the base case. Consequently, the resulting values here will be larger than the Fibonacci solutions due to the additional 1 added in each step.
+ */
+
+/**
  *
  * @param {number} n
  * @returns {number}
