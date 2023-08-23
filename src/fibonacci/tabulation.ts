@@ -77,5 +77,3 @@ const soultion3 = (n: number): number => {
 
   return prev2;
 };
-
-soultion3(5);
