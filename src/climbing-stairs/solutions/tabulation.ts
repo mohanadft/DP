@@ -52,3 +52,28 @@ const solutionTwo = (n: number): number => {
 
   return dp.at(-1) as number;
 };
+
+/**
+ * The most optimized solution which has a
+ * TC: O(n)
+ * SC: O(1)
+ *
+ * This solution come with wondering, why we need a whole array for computing
+ * the fib of a number, while we just need two values which they are the values
+ * before the number and twice before it.
+ * @param {number} n
+ * @returns {number}
+ */
+
+const soultionThree = (n: number): number => {
+  let prev1 = 0;
+  let prev2 = 1;
+
+  for (let i = 2; i <= n; i++) {
+    let res = prev1 + prev2;
+    prev1 = prev2;
+    prev2 = res;
+  }
+
+  return prev2;
+};
