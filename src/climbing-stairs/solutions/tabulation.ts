@@ -14,7 +14,7 @@
 
 const solutionOne = (n: number): number => {
   function* fibGenerator() {
-    let arr = [0, 1];
+    let arr = [1, 1];
 
     yield arr[0];
     yield arr[1];
@@ -44,7 +44,7 @@ const solutionOne = (n: number): number => {
  */
 
 const solutionTwo = (n: number): number => {
-  let dp = [0, 1];
+  let dp = [1, 1];
 
   for (let i = 2; i <= n; i++) {
     dp[i] = dp[i - 1] + dp[i - 2];
@@ -66,7 +66,7 @@ const solutionTwo = (n: number): number => {
  */
 
 const soultionThree = (n: number): number => {
-  let prev1 = 0;
+  let prev1 = 1;
   let prev2 = 1;
 
   for (let i = 2; i <= n; i++) {
