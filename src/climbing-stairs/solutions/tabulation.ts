@@ -34,3 +34,21 @@ const solutionOne = (n: number): number => {
 
   return gen.next().value as number;
 };
+
+/**
+ * Time Complexity: O(n)
+ * Space Complexity: O(n)
+ *
+ * @param {number} n
+ * @returns {number}
+ */
+
+const solutionTwo = (n: number): number => {
+  let dp = [0, 1];
+
+  for (let i = 2; i <= n; i++) {
+    dp[i] = dp[i - 1] + dp[i - 2];
+  }
+
+  return dp.at(-1) as number;
+};
