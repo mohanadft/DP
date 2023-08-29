@@ -27,13 +27,8 @@ Explanation: There are three ways to climb to the top.
 
 ## Solutions
 
-### Tabulation
-
-Tabulation is a ‘bottom-up’ approach where we start from the base case and reach the final answer that we want.
-
-### Memoization
-
-Memoization is a top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs.
+* Tabulation: A ‘bottom-up’ approach where we start from the base case and reach the final answer that we want.
+* Memoization: A top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs.
 
 ## NOTE 📔
 
