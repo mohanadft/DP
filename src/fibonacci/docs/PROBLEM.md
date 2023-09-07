@@ -12,5 +12,5 @@ Given n, calculate F(n).
 
 ## Solutions
 
-* Tabulation: A ‘bottom-up’ approach where we start from the base case and reach the final answer that we want.
-* Memoization: A top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs.
+- Tabulation: A ‘bottom-up’ approach where we start from the base case and reach the final answer that we want.
+- Memoization: A top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs and the same result.
