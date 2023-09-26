@@ -1,34 +1,32 @@
 /**
- *
+ * TC: O(2^26)
+ * SC: O(n) where n is the length of the result
  * @param {number[]} arr
  * @param {number} w
  * @returns
  */
 
 const solution = (arr: number[], w: number) => {
-  let maxStr = '';
+  let str: string[] = [];
 
-  const dp = (i: number, w: number, s: string[]): boolean => {
+  const dp = (i: number, w: number): boolean => {
     if (i < 0 || w < 0) return false;
 
     if (w == 0) {
       return true;
     }
 
-    s.push(String.fromCharCode(i + 97));
+    str.push(String.fromCharCode(i + 97));
 
-    if (dp(i, w - arr[i], s)) {
-      let str = s.join('');
-      if (str > maxStr) maxStr = str;
-
+    if (dp(i, w - arr[i])) {
       return true;
     }
 
-    s.pop();
+    str.pop();
 
-    return dp(i - 1, w, s);
+    return dp(i - 1, w);
   };
 
-  dp(arr.length - 1, w, []);
-  return maxStr;
+  dp(arr.length - 1, w);
+  return str.join('');
 };
