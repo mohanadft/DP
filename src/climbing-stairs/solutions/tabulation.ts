@@ -12,7 +12,7 @@
  * of memoization)
  */
 
-const solutionOne = (n: number): number => {
+const climbingStairs1 = (n: number): number => {
   function* fibGenerator() {
     let arr = [1, 1];
 
@@ -43,7 +43,7 @@ const solutionOne = (n: number): number => {
  * @returns {number}
  */
 
-const solutionTwo = (n: number): number => {
+const climbingStairs2 = (n: number): number => {
   let dp = [1, 1];
 
   for (let i = 2; i <= n; i++) {
@@ -65,7 +65,7 @@ const solutionTwo = (n: number): number => {
  * @returns {number}
  */
 
-const soultionThree = (n: number): number => {
+const climbingStairs3 = (n: number): number => {
   let prev1 = 1;
   let prev2 = 1;
 

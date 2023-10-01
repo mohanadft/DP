@@ -1,18 +1,13 @@
 import { MemoObjectType } from '../../@types/types';
 
 /**
-
-
- */
-
-/**
  *
  * @param {number} n
  * @returns {number}
  */
 
 // Solution 1
-const solution = (n: number): number => {
+const climbingStairs1 = (n: number): number => {
   let m: MemoObjectType = {};
   const backtrack = (n: number) => {
     if (n <= 1) return 1;
@@ -35,12 +30,12 @@ const solution = (n: number): number => {
 // Solution 2 (Having a default hash,
 // no need to declare it in scope of the function)
 
-const solution2 = (n: number, m: MemoObjectType = {}): number => {
+const climbingStairs2 = (n: number, m: MemoObjectType = {}): number => {
   if (n <= 1) return 1;
 
   if (m[n]) return m[n];
 
-  m[n] = solution2(n - 1, m) + solution2(n - 2, m);
+  m[n] = climbingStairs2(n - 1, m) + climbingStairs2(n - 2, m);
   return m[n];
 };
 
@@ -52,12 +47,15 @@ const solution2 = (n: number, m: MemoObjectType = {}): number => {
  */
 
 // Solution 3 (Having a default array, no need to declare it in scope of the function)
-const solution3 = (n: number, m: number[] = Array(n + 1).fill(-1)): number => {
+const climbingStairs3 = (
+  n: number,
+  m: number[] = Array(n + 1).fill(-1)
+): number => {
   if (n <= 1) return 1;
 
   if (m[n] != -1) return m[n];
 
-  m[n] = solution3(n - 1, m) + solution3(n - 2, m);
+  m[n] = climbingStairs3(n - 1, m) + climbingStairs3(n - 2, m);
   return m[n];
 };
 
@@ -68,7 +66,7 @@ const solution3 = (n: number, m: number[] = Array(n + 1).fill(-1)): number => {
  */
 
 // Solution 4 (Using array for memoization)
-const solution4 = (n: number): number => {
+const climbingStairs4 = (n: number): number => {
   let m = Array(n + 1).fill(-1);
   const backtrack = (n: number) => {
     if (n <= 1) return 1;
